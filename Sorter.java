@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Sorter {
@@ -22,14 +23,27 @@ public class Sorter {
             System.out.print(value + " ");
         }
 
+
         int array[] = new int[7];
+        Random rand = new Random();
 
         for(int i = 0; i < 7; i++) {
-            array[i] = i - 2;
+            array[i] = rand.nextInt(100);
+        }
+
+        System.out.println("\n\nUnsorted array:");
+        for (int value : array) {
+            System.out.print(value + " ");
+        
         }
 
         sort(array);
 
+        System.out.println("\nSorted array:");
+        for (int value : array) {
+            System.out.print(value + " ");
+        
+        }
         scanner.close();
     }
 
@@ -52,7 +66,7 @@ public class Sorter {
             arr[i] = temp;
         }
     }
-    public void insetionSort(int arr[]) {
+    public static void insetionSort(int arr[]) {
         int n = arr.length;
         for (int i = 1; i < n; ++i) {
             int key = arr[i];
@@ -66,7 +80,7 @@ public class Sorter {
             arr[j + 1] = key;
         }
     }
-    public static void sort(int array) {
+    public static void sort(int array[]) {
         insetionSort(array);
     }
 }
