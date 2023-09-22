@@ -28,6 +28,8 @@ public class Sorter {
             array[i] = i - 2;
         }
 
+        sort(array);
+
         scanner.close();
     }
 
@@ -50,7 +52,7 @@ public class Sorter {
             arr[i] = temp;
         }
     }
-    public static void sort(int arr[]) {
+    public void insetionSort(int arr[]) {
         int n = arr.length;
         for (int i = 1; i < n; ++i) {
             int key = arr[i];
@@ -63,5 +65,8 @@ public class Sorter {
             }
             arr[j + 1] = key;
         }
+    }
+    public static void sort(int array) {
+        insetionSort(array);
     }
 }
