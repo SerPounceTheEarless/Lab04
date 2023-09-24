@@ -16,7 +16,8 @@ public class Sorter {
             arr[i] = scanner.nextInt();
         }
 
-        selectionSort(arr);
+        sortInsert(arr);
+        sortSelect(arr);
 
         System.out.println("Sorted array:");
         for (int value : arr) {
@@ -24,26 +25,6 @@ public class Sorter {
         }
 
 
-        int array[] = new int[7];
-        Random rand = new Random();
-
-        for(int i = 0; i < 7; i++) {
-            array[i] = rand.nextInt(100);
-        }
-
-        System.out.println("\n\nUnsorted array:");
-        for (int value : array) {
-            System.out.print(value + " ");
-        
-        }
-
-        sort(array);
-
-        System.out.println("\nSorted array:");
-        for (int value : array) {
-            System.out.print(value + " ");
-        
-        }
         scanner.close();
     }
 
@@ -80,7 +61,10 @@ public class Sorter {
             arr[j + 1] = key;
         }
     }
-    public static void sort(int array[]) {
+    public static void sortInsert(int array[]) {
         insetionSort(array);
+    }
+    public static void sortSelect(int array[]) {
+        selectionSort(array);
     }
 }
